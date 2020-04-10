@@ -1,0 +1,15 @@
+<nav>
+   <ul *ngIf="authService.isUserLoggedIn()">
+      <li>
+         <a (click)="userLogout()">Logout</a>
+      </li>
+   </ul>
+   <ul *ngIf="!authService.isUserLoggedIn()">
+      <li>
+         <a routerLink="/user/login">Login</a>
+      </li>
+      <li>
+         <a routerLink="user/register">Sign Up</a>
+      </li>
+   </ul>
+</nav>

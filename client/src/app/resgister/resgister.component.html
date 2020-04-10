@@ -1,0 +1,20 @@
+<div class="user-form">
+   <h1>Sign Up</h1>
+   <form>
+      <input
+         type="email"
+         name="email"
+         [(ngModel)]="email"
+         placeholder="Your Email"
+      />
+      <input
+         type="password"
+         name="password"
+         [(ngModel)]="password"
+         placeholder="Your Password"
+      />
+      <button [disabled]="!email || !password" (click)="saveUserData()">
+         Register
+      </button>
+   </form>
+</div>
